@@ -19,11 +19,11 @@ import java.util.Set;
 
 public class Bloc implements Serializable {
 
-    private static final long serialVersionUID=1L;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private int IdBloc;
+    private long IdBloc;
 
     @ManyToOne()
     private Foyer foyer;
@@ -33,8 +33,7 @@ public class Bloc implements Serializable {
 
     private String nomBloc;
     private Long capaciteBloc;
-    @Id
-    private Long id;
+
 
 
 }

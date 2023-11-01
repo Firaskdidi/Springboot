@@ -23,23 +23,19 @@ public class Chambre implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdChambre ;
+    private int idChambre;
 
-    @ManyToOne()
-    private Bloc bloc;
-
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Reservations> reservations;
-
-
-    private Long numeroChambre;
+    private int numeroChambre;
 
     @Enumerated(EnumType.STRING)
-    private TypeChambre typeC;
-
-
-
-
-
+    private TypeChambre chambreType;
+    @ManyToOne
+    private Bloc bloc ;
+    @OneToMany
+    private List<Reservations> reservation;
 
 }
+
+
+
+

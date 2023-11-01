@@ -12,10 +12,10 @@ import java.util.List;
 public interface Iuniversite extends JpaRepository<Universite,Integer> {
 
 
-    List<Universite> findByIdUniversite(Integer idUniversite);
+    public List<Universite> findByIdUniversite(Integer idUniversite);
 
-    List<Universite> findByNomUniversite(String nomUniversite);
+    public List<Universite> findByNomUniversite(String nomUniversite);
 
-    List<Universite> findByAddress(String address);
+    public List<Universite> findByAddress(String address);
 
 }

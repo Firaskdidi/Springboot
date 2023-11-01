@@ -5,14 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface Ichambre extends JpaRepository<Chambre,Integer> {
+public interface Ichambre extends JpaRepository<Chambre, Integer> {
+  public List<Chambre> findByIdChambre(Integer idChambre);
 
 
-    List<Chambre> findChambreNotRes();
-
-    List<Chambre> findByNumeroChambre();
-
-    Chambre findChambreByNum(long numeroChambre);
-
-
+    public List<Chambre> findByNumeroChambre(Integer numeroChambre);
 }
+

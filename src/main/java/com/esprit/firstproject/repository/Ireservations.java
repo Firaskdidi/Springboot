@@ -7,10 +7,10 @@ import java.util.Date;
 import java.util.List;
 
 public interface Ireservations extends JpaRepository<Reservations,String> {
-    List<Reservations> findByIdReservation(String idReservation);
-    List<Reservations> findByAnneeUniversitaire(Date anneeUniversitaire);
+   public List<Reservations> findByIdReservation(String idReservation);
+   public List<Reservations> findByAnneeUniversitaire(Date anneeUniversitaire);
 
-    List<Reservations> findByConfirmation(Boolean estValid);
+
 
 
 

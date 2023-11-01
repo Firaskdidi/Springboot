@@ -13,13 +13,13 @@ import java.util.List;
 @Repository
 public interface Ietudiant extends JpaRepository<Etudiant,Integer>
 {
-    List<Etudiant> findAll();
+    public List<Etudiant> findAll();
 
-    List<Etudiant> findEtudiantByEcole(String ecole);
+    public  List<Etudiant> findEtudiantByEcole(String ecole);
 
-    Etudiant findEtudiantByCin(Integer cin);
+    public Etudiant findEtudiantByCin(Integer cin);
 
-    List<Etudiant> findEtudiantByDateNaissance(Date dateNaissance);
+    public List<Etudiant> findEtudiantByDateNaissance(Date dateNaissance);
 
 
 
