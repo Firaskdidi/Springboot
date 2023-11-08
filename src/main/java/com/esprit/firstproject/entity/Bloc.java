@@ -18,12 +18,12 @@ import java.util.Set;
 @NoArgsConstructor
 
 public class Bloc implements Serializable {
-
+    private static final long serialVersionUID=1L;
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private long IdBloc;
+    private int IdBloc;
 
     @ManyToOne()
     private Foyer foyer;
@@ -32,7 +32,7 @@ public class Bloc implements Serializable {
     private Set<Chambre> chambres;
 
     private String nomBloc;
-    private Long capaciteBloc;
+    private Integer capaciteBloc;
 
 
 
