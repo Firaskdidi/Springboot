@@ -3,19 +3,28 @@ package com.esprit.firstproject.service;
 import com.esprit.firstproject.entity.Bloc;
 import com.esprit.firstproject.entity.Chambre;
 import com.esprit.firstproject.repository.Ibloc;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class BlocService implements IBlocService{
     @Autowired
     private Ibloc ibloc;
     @Override
+    @Scheduled(cron =" 0 * * * * ?")
     public List<Bloc> retrieveAllBloc() {
-        return ibloc.findAll();
+        List<Bloc> listB = ibloc.findAll();
+        for (Bloc B:listB){
+            log.info("Bloc :" +B);
+        }
+        return listB;
+
     }
 
     @Override
